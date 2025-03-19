@@ -15,7 +15,7 @@ import voice2 from "./../../assets/rebuke.mp3";
 
 import ParticlesBackground from "./../../pages/Experience/Experience"
 
-import Mute from "./../../assets/Mute.png";
+
 import Resume from "./../../assets/resume.png";
 
 import { FaStar } from 'react-icons/fa6';
