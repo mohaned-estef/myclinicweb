@@ -1,0 +1,495 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+
+.Recent {
+  
+    padding: 30px;
+    font-family: Arial, sans-serif;
+   
+}
+
+.Recent-Content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.Recent-cards {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* في البداية نجعل العناصر في شكل عمودي */
+    gap: 20px;
+}
+
+.CardWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* أقصى عرض ممكن */
+    gap: 20px;
+}
+
+.Card {
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.Card h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    overflow-wrap: break-word;
+}
+
+.Card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 576px) {
+
+.Recent-cards {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* في البداية نجعل العناصر في شكل عمودي */
+    gap: 20px;
+}
+    
+
+}
+
+.show-more,
+.show-less {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    border: none;
+}
+
+.NavigationButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev-button {
+    margin-right: 20px;
+    border: none;
+}
+
+.next-button {
+    margin-left: 20px;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Media Query لتعديل التنسيق عند تصغير الشاشة */
+@media (max-width: 770px) {
+    /* تغير التنسيق لتصبح الصور والبطاقات في عمود واحد */
+    .CardWrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .Card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Card img {
+        width: 100%;
+        height:300px;
+    }
+
+    .Recent-cards {
+        padding: 10px;
+    }
+
+    /* تعديل الأزرار لتكون أكثر توافقًا مع الشاشات الصغيرة */
+    .btn {
+        width: 100%; /* جعل الأزرار تمتد بالكامل */
+        font-size: 14px;
+    }
+
+    .prev-button, .next-button {
+        margin: 10px 0;
+    }
+}
+
+/* Media Query للشاشات الكبيرة لتنسيق مناسب */
+@media (min-width: 770px) {
+    .Recent-cards {
+        display: flex;
+      
+        flex-direction: column; /* جعل العناصر في شكل عمودي في البداية */
+    }
+
+    .CardWrapper {
+        
+        flex-direction: row;
+        justify-content: space-between; /* المسافة بين البطاقات */
+        gap: 30px;
+    }
+
+    .Card {
+        
+        width: 48%;
+    }
+
+    .Card img{
+        width: 300px;
+        height: 300px;
+    }
+    .NavigationButtons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}
+/* تعيين حجم أكبر للـ arrows */
+
+.Some-treatments{
+ 
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.Case{
+    display: flex;
+    margin:20px;
+    margin:  auto;
+}
+
+
+@media (max-width:576px) {
+    
+    .Case {
+        
+        display:flex;
+        flex-direction: column;
+        margin: auto;
+
+    
+    }
+}
+
+.Case-before{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+}
+
+.Case-after{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin:20px;
+}
+
+
+.Case-before img{
+
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    animation: slideIn 4s ease-out;
+
+}
+
+@keyframes slideIn {
+    0% {
+     opacity: 1; /* البداية من الجهة اليسرى */
+    }
+    100% {
+      opacity: 0; /* النهاية في المكان العادي */
+    }
+  }
+  
+@media (max-width:576px) {
+    .Case-before img{
+
+        width:100px;
+        height:100px;
+        border-radius: 10px;
+    
+    }
+    
+}
+
+.Case-before img:hover{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+@media (max-width:576px) {
+    .Case-before img:hover{
+
+        width:100px;
+        height:100px;
+        border-radius: 10px;
+    
+    }
+    
+}
+
+
+.Case-after img{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    animation: slideIn 4s ease-out;
+}
+
+@media (max-width:576px) {
+    .Case-after img{
+
+        width:100px;
+        height:100px;
+        border-radius: 10px;
+    
+    }
+    
+}
+
+@keyframes slideIn {
+    0% {
+     opacity: 1; /* البداية من الجهة اليسرى */
+    }
+    100% {
+      opacity: 0; /* النهاية في المكان العادي */
+    }
+  }
+  
+
+@media (max-width:576px) {
+    .Case-after img:hover{
+
+        width:100px;
+        height:100px;
+        border-radius: 10px;
+    
+    }
+    
+}
+
+
+.Case-after img:hover{
+
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+
+
+.btn-Case{
+    width:80%;
+    
+    border-radius: 6px;
+    border: none;
+    background-color: inherit;
+   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.latestNews{
+   
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+
+.department{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    margin: 200px;
+}
+
+@media (max-width:576px) {
+    
+    .department{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        max-width:200px;
+        margin: 20px;
+    }
+}
+
+.department .department-title{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+}
+@media (max-width:576px) {
+    .department .department-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        margin: 0px 20px 0px 20px;
+       
+    }
+}
+
+
+.department p{
+    color:black;
+    max-width: 300px;
+    max-height: 240px;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* لتحديد عرض السكروول في المتصفحات التي تدعمه */
+    scrollbar-color: red transparent; 
+   
+}
+
+.department img{
+    width:140px;
+    height: 140px;
+    border-radius: 6px;    
+}
+
+@media (max-width:576px){
+.department-reverse{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width:100%;
+    margin: 20px;
+
+}
+}
+
+.department-reverse .department-reverse-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin: 30px;
+}
+
+@media (max-width:576px){
+    .department-reverse .department-reverse-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        
+    }
+
+}
+
+
+
+.department-reverse p{
+    color:black;
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* لتحديد عرض السكروول في المتصفحات التي تدعمه */
+    scrollbar-color: red transparent; 
+    
+}
+
+.department-reverse img{
+    width:140px;
+    height: 140px;
+    
+}
+
+
+/*
+.myskills{
+    padding: 20px;
+    background: repeating-radial-gradient(at top, #01030c44, #d4941c);
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1s ease, transform 1s ease; 
+    font-family: "yourfont";
+}
+
+.myskills h2{
+    text-align: center;
+}
+  
+.myskills.slide-up {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+*/
+
+

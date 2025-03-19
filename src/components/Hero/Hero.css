@@ -1,0 +1,114 @@
+/* استيراد الخطوط بشكل صحيح */
+@font-face {
+  font-family: ''; /* اسم الخط الذي ستستخدمه في CSS */
+  src: url('./../../assets/DeliciousHandrawn-Regular.ttf') format('truetype');
+}
+
+/* استخدام الخط في عناصر مختلفة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.h1 {
+  font-weight: 500;
+  font-size: 4px;
+}
+
+.Hero-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.Hero-content2 {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+
+.Hero-img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.Hero-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 90%;
+  position: absolute;
+  transform-origin: bottom center;
+  animation: moveImg 3s ease-in-out;
+}
+
+@keyframes moveImg {
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* الأنيميشين للنص */
+
+
+.Hero-content h1 {
+  animation: moveTextDown 1s ease-in-out 3s forwards; /* التأخير 3 ثوانٍ بعد انتهاء حركة الصورة */
+}
+
+@keyframes moveTextDown {
+  0% {
+    transform: translateY(0); /* البداية في المكان الأصلي */
+  }
+  100% {
+    transform: translateY(30px); /* الانتقال لأسفل بمقدار 90px */
+  }
+}
+
+
+.Hero-content2 h1 {
+  animation: moveTextDown2 1s ease-in-out 3s forwards; /* التأخير 3 ثوانٍ بعد انتهاء حركة الصورة */
+}
+
+@keyframes moveTextDown2 {
+  0% {
+    transform: translateY(0); /* البداية في المكان الأصلي */
+  }
+  100% {
+    transform: translateY(120px); 
+  }
+}
+
+
+.Hero-content p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Hero-content2 p {
+  font-size: 14px;
+  font-weight: 600;
+}
+

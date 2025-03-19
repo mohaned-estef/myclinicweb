@@ -1,0 +1,200 @@
+/* استيراد الخطوط بشكل صحيح */
+
+  
+  /* استخدام الخط في عناصر مختلفة */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .HeroAbout {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  
+  }
+
+  .h1 {
+   
+    font-weight: 6;
+    font-size: 4px;
+  
+  }
+  
+  /* تعديل الزر ليشغل المساحة المتبقية أسفل اليسار */
+  .btn-start {
+    background: inherit;
+   
+    color: white;
+  
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center; /* محاذاة النص في المنتصف */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .btn-start:hover {
+    background: initial;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+.HeroAboutContent{
+    
+    position: relative;
+    height:200px;
+
+}
+.HeroAboutContentPart1{
+
+
+
+}
+
+.HeroAboutContentPart2{
+
+ 
+
+}
+
+.btn-ShowMore{
+    margin-top: 16px;
+    background-color: inherit;
+    border: none;
+    transition: all 1s ease-in-out;
+}
+
+
+  /*
+ import React, { useState, useEffect } from 'react';
+import "./PopularAbout.css";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import { TabContainer } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Accordion from 'react-bootstrap/Accordion';
+import Carousel from 'react-bootstrap/Carousel';
+
+import Photo6 from "./../../assets/Apex.png";
+import Photo7 from "./../../assets/Xray.png";
+import Photo8 from "./../../assets/rotary.png";
+
+export default function PopularAbout() {
+  const maxCharsForScroll = 100;
+  const maxCharsForScrollTitle = 15;
+
+  const ApexTechnique = "The Apex Locator is a medical device used in dental clinics and is considered one of the essential tools in endodontic treatment. It is specifically used to accurately determine the length of the root canal during root canal treatment, which helps improve the accuracy of treatment and reduces errors.";
+  const RotaryTechnique = "The rotary device used in dental clinics is an electrical device used in dental treatment, especially in root canal treatment procedures. This device is an essential tool for the doctor to perform operations with high accuracy and efficiency.";
+  const XrayTechnique = "The X-ray machine used in dental clinics is an essential tool for diagnosing and treating many dental conditions. This device is used to produce images of the internal parts of the teeth and mouth, which helps to identify problems that cannot be seen with a regular examination.";
+
+  const dataTechniques = [
+    {
+      id: 1,
+      title: "Apex",
+      desc: ApexTechnique,
+      myimg: Photo6,
+    },
+    {
+      id: 2,
+      title: "Rotary",
+      desc: RotaryTechnique,
+      myimg: Photo7,
+    },
+    {
+      id: 3,
+      title: "Xray",
+      desc: XrayTechnique,
+      myimg: Photo8,
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0); // لتخزين العنصر الحالي
+
+  const nextSlideTechnique = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % dataTechniques.length);
+  };
+
+  const prevSlideTechnique = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + dataTechniques.length) % dataTechniques.length);
+  };
+
+  // استخدام map لعرض العنصر الذي يتوافق مع currentIndex فقط
+  const currentTechnique = dataTechniques.map((technique, index) => {
+    if (index === currentIndex) {
+      return (
+        <div className="PopularTechniquesFeatures-Card" key={technique.id}>
+          <h2 style={{ fontFamily: "yourfont" }}>{technique.title}</h2>
+          <img src={technique.myimg} alt={technique.title} />
+          {technique.desc.length > maxCharsForScroll ? (
+            <div className="d-flex flex-column">
+              <h5>Features</h5>
+              <div
+                style={{
+                  fontSize: "16px",
+                  maxHeight: technique.desc.length > maxCharsForScroll ? "100px" : "auto",
+                  overflowY: technique.desc.length > maxCharsForScroll ? "scroll" : "visible",
+                }}
+                className="text-container"
+              >
+                <h5>{technique.desc}</h5>
+              </div>
+            </div>
+          ) : (
+            <div
+              style={{
+                fontSize: "16px",
+                maxHeight: "40px",
+                overflowY: "visible",
+              }}
+              className="text-container"
+            >
+              {technique.desc}
+            </div>
+          )}
+        </div>
+      );
+    }
+    return null;
+  });
+
+  return (
+    <div className="PopularAbout container-fluid">
+      <Tabs justify="center" defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
+        <TabContainer eventKey="statics" title={<h6 style={{ fontSize: "32px", fontFamily: "yourfont", color: 'black' }}>Statics</h6>}>
+          <Carousel activeIndex={currentIndex} onSelect={setCurrentIndex} indicators={false} interval={null}>
+            <Carousel.Item>
+              <section>
+                <div className="PopularTechniquesAbout">
+                  <h2 style={{ fontFamily: "yourfont", fontSize: "46px" }}>Dental clinic equipment</h2>
+                  <div className="PopularTechniques-cards">
+                    <button onClick={prevSlideTechnique} className="prev-button2 btn">Prev</button>
+                    <div className="PopularTechniques-CardWrapper d-flex justify-content-center align-items-center">
+                      {currentTechnique}
+                    </div>
+                    <div className="next">
+                      <button onClick={nextSlideTechnique} className="btn next-button2">
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </Carousel.Item>
+          </Carousel>
+        </TabContainer>
+      </Tabs>
+    </div>
+  );
+}
+
+*/

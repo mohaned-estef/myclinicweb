@@ -1,0 +1,191 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+
+.PopularAbout{
+    background:inherit;
+    color: red;
+    height:200x;
+}
+
+.text-container{
+    
+    background: inherit;
+}
+
+.carousel{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.next{
+    width:100%;
+}
+
+.numberPatients{
+    
+    justify-self: center;
+    width:100%;
+    color:red;
+   
+}
+
+.mainStatics{
+    
+    width:100%;
+}
+
+
+
+@media (max-width:576px) {
+    .mainStatics{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+    .mainStatics h2{
+        font-size: 24px;
+    }
+}
+
+.PopularRecentAbout{
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.PopularContentAbout{
+
+    text-align: center;
+}
+
+.Popular-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* في البداية نجعل العناصر في شكل عمودي */
+    gap: 20px;
+    
+}
+
+.prev-button2{
+    font-size: 24px;
+    width: 20%;
+ 
+}
+
+.next-button2{
+    font-size: 24px;
+    width: 20%;
+  
+}
+
+.prev-button2:hover{
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 1);
+    
+}
+
+.next-button2:hover{
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 1);
+}
+.Popular-cards .btn{
+    background: inherit;
+ 
+    font-size: 24px;
+}
+
+.Popular-CardWrapper{
+    border:none;
+}
+
+.Popular-Card{
+    background: inherit;
+    border-color: aqua;
+    border-style: dotted;
+    border-width: 2px;
+    border: none;
+
+}
+
+.dataChars{
+    width:300px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (max-width:576px) {
+
+    .dataChars{
+    width:200px;
+   padding-left: 30px;
+   
+}
+
+  
+}
+
+.PopularTechniquesAbout{
+ 
+    min-height:100vh;
+}
+
+.PopularTechniquesAbout{
+
+    text-align: center;
+}
+
+.PopularTechniques-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* في البداية نجعل العناصر في شكل عمودي */
+    gap: 20px;
+    
+}
+
+.PopularTechniques-CardWrapper{
+    border:none;
+}
+
+.PopularTechniques-Card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    border-color: aqua;
+    border-style: dotted;
+    border-width: 2px;
+    border: none;
+
+}
+
+.PopularTechniquesFeatures-Card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+
+

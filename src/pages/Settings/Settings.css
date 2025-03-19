@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.show-settings{
+
+    width:80%;
+    height: 800px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.show-settings-hero{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+
+}
+
+.show-settings-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+
+}
+
+.show-settings-popular{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+
+}
+#btn-bringPic {
+    width: 100%; /* تأكد من أن الزر يأخذ العرض الكامل */
+    padding: 10px; /* إضافة بعض المسافة للزر لسهولة النقر */
+    background-color: #f0f0f0; /* إضافة لون خلفية للزر لتمييزه */
+    border: 1px solid #ccc; /* تحديد الحدود */
+    cursor: pointer; /* إظهار مؤشر النقر */
+    margin-top: 20px; /* إضافة هامش أعلى الزر */
+    box-sizing: border-box; /* تأكد من أن الحجم يشمل الحشو */
+    color:red;
+  }
+  

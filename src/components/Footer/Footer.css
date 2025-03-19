@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.Footer{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+
+}
+
+.Footer-Content{
+
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.Footer-Content .location{
+
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.Footer-Content .around-web {
+
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.Footer-Content .around-web h3{
+
+ 
+
+}
+
+.Footer-Content .around-web .around-web-icons{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Footer-Content .around-web .around-web-icons a{
+
+    font-size: 36px;   
+}
+
+
+
+.Footer-Content .about-me{
+
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.Footer-Content .about-me h3,p
+
+{ 
+
+}
+
+.Footer .footer-copyRights{
+    
+    width:100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+@media (max-width : 700px){
+    .Footer-Content{
+ 
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+
+}
+    .Footer-Content .location ,.around-web ,.about-me{
+        margin: 20px;
+    }
+}

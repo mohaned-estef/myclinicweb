@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.Discounts{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    
+    
+    border-bottom: none;
+
+}
+
+.Discount{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+
+}
+
+.Discount-desc{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        word-break: keep-all;
+      
+        scrollbar-width:thin; /* لتحديد عرض السكروول في المتصفحات التي تدعمه */
+        scrollbar-color: rgb(214, 18, 18) transparent; 
+    
+}
+
+.Discount img{
+        
+    margin: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height:200px
+}
+
+
+@media (max-width : 576px) {
+
+    
+.Discounts{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+
+    .Discount{
+    
+        
+        min-height: 600px;
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .Discount-desc{
+
+        width: 100%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        word-break: keep-all;
+        
+}
+
+    .newDiscount{
+        min-height: 100px;
+        scrollbar-width: thin;
+        scrollbar-color: green;
+    }
+
+    .Discount img{
+        
+        border-radius: 10px;
+        width:200px;
+        height:200px;
+}
+
+}
+
+
+
+
+
+

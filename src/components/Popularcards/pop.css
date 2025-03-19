@@ -1,0 +1,189 @@
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
+.SingleCard{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+    color:black;
+}
+
+.SingleCardReverse{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 60px;
+
+}
+
+.SingleCard .side{
+
+    display: flex;
+    flex-direction:row;
+    color:black;
+
+}
+
+.SingleCardReverse .side{
+    width: 100%;
+    display: flex;
+    flex-direction:row-reverse;
+    color:black;
+
+}
+
+.side-1{
+
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    color:black;
+ 
+}
+.side-1 h3, .side-1 p {
+    color: #000;  /* تأكد من أن اللون مناسب للعرض */
+    font-size: 16px;  /* تأكد من أن النص ليس صغيرًا جدًا */
+  }
+.side-2{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+@media (max-width : 420px){
+    .SingleCardReverse .side{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        direction: rtl;      
+        margin-bottom:3rem;
+
+    }
+
+    .SingleCard .side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        direction: rtl;  
+        margin-bottom: 3rem;
+        
+    }
+    .side-1{
+
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        font-weight: 400;
+     
+    }
+    .side-2{
+
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        direction: ltr;  
+    
+    }
+    
+    .side-2 img{
+        height:120px;
+    }
+
+    .side .side-2 img:nth-child(1){
+
+        width: 100%;
+        position: absolute;
+        border-radius: 6px;
+        z-index: -99;
+        margin-top: 60px;
+
+    }
+
+    .side .side-2 img:nth-child(2){
+
+        width: 100%;
+        position: absolute;
+        right: 0;
+        border-radius: 6px;
+        z-index:-99;
+        margin-top: 200px;
+        
+    }
+}
+
+.side-2 img{
+    height:120px;
+}
+
+.side .side-2 img:nth-child(1){
+
+    width: 49%;
+    position: absolute;
+    border-radius: 6px;
+    z-index: -99;
+
+}
+
+.side .side-2 img:nth-child(2){
+
+    width: 49%;
+    position: absolute;
+    right: 0;
+    border-radius: 6px;
+    z-index:-99;
+    
+}
+
+@media (max-width : 420px){
+
+    .side-2 img{
+        height:200px;
+        width: 100%;
+    }
+    
+    .side .side-2 img:nth-child(1){
+    
+        width: 100%;
+        position: absolute;
+        border-radius: 6px;
+        z-index: -99;
+    
+    }
+    
+    .side .side-2 img:nth-child(2){
+    
+        width: 100%;
+        position: absolute;
+        right: 0;
+        border-radius: 6px;
+        z-index:-99;
+        
+    }
+
+}
+

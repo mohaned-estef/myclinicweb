@@ -1,0 +1,71 @@
+.myskills{
+    padding: 20px;
+    
+    background: inherit;
+    
+    transform: translateY(0px); /* بدء العنصر في أسفل الصفحة */
+ 
+
+
+
+
+}
+
+.myskills h2{
+    text-align: center;
+}
+  
+.dataCharsSkills{
+    width:300px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media (max-width:576px){
+    .myskills{
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .skill{
+        width: 100%;
+       
+    }
+
+    .dataCharsSkills{
+     
+        width: 200px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        padding:10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
